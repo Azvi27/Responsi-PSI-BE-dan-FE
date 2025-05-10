@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1440, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png">
+    <meta name="og:type" content="website"><meta name="twitter:card" content="photo">
+    <script id="anima-load-script" src="load.js"></script>
+    <script id="anima-hotspots-script" src="hotspots.js"></script>
+    <script id="anima-overrides-script" src="overrides.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+    <style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:500,400,600,300|Rowdies:400|Rubik:300,500");
+
+
+@font-face {
+  font-family: "Rounded Mplus 1c Bold-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/6070cab4d792a714f6f3f671/fonts/mplusrounded1c-bold.ttf') format("truetype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/68059a1e9fcaf812ea621945.68059a1f9fcaf812ea621948.edXI8DF.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --black: #000000;
+  --river-bed: #3e4b5b;
+  --tiber: #042f3c;
+  --white: #ffffff;
+ 
+  --font-size-l: 24px;
+  --font-size-m: 23px;
+  --font-size-s: 20px;
+  --font-size-xl: 29px;
+  --font-size-xxl: 31px;
+  --font-size-xxxl: 61px;
+  --font-size-xxxxl: 64px;
+ 
+  --font-family-roboto: "Roboto", Helvetica;
+  --font-family-rounded_mplus_1c_bold-bold: "Rounded Mplus 1c Bold-Bold", Helvetica;
+  --font-family-rowdies: "Rowdies", Helvetica;
+  --font-family-rubik: "Rubik", Helvetica;
+}
+.rowdies-normal-white-23px {
+  color: var(--white);
+  font-family: var(--font-family-rowdies);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.rowdies-normal-white-24px {
+  color: var(--white);
+  font-family: var(--font-family-rowdies);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.roboto-normal-white-64px {
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.rubik-light-tiber-23px {
+  color: var(--tiber);
+  font-family: var(--font-family-rubik);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-light-river-bed-23px {
+  color: var(--river-bed);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 300;
+}
+
+.roboto-medium-river-bed-23px {
+  color: var(--river-bed);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+:root {
+}
+
+
+/* screen - vendor-gamma */
+
+.vendor-gamma {
+  background-color: #f2edf3;
+  height: 1024px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.vendor-gamma .rectangle-595-OyttpT {
+  background-color: #f2fbfd;
+  box-shadow: 0px 4px 30px #0000001a;
+  height: 81px;
+  left: 3px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.vendor-gamma .vendor-betta-OyttpT {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, rgba(0, 180, 211, 1) 0%, rgba(0, 72, 84, 1) 100%);
+  background-clip: text;
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 96px;
+  letter-spacing: -0.93px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  text-fill-color: transparent;
+  top: 23px;
+  white-space: nowrap;
+  width: 208px;
+}
+
+.vendor-gamma .conveyor-monitoring-system-OyttpT {
+  background-color: transparent;
+  color: #004854;
+  font-family: var(--font-family-rounded_mplus_1c_bold-bold);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 577px;
+  letter-spacing: -0.87px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 23px;
+  white-space: nowrap;
+  width: 405px;
+}
+
+.vendor-gamma .group-288975-OyttpT {
+  background-color: transparent;
+  height: 32px;
+  left: 40px;
+  position: absolute;
+  top: 25px;
+  width: 33px;
+}
+
+.vendor-gamma .rectangle-600-wpJidn {
+  background: linear-gradient(134deg, rgba(50, 151, 231, 1) 0%, rgba(0, 108, 127, 1) 100%);
+  height: 14px;
+  left: 19px;
+  top: 0px;
+  width: 14px;
+}
+
+.vendor-gamma .rectangle-602-wpJidn {
+  background: linear-gradient(134deg, rgba(50, 151, 231, 1) 0%, rgba(0, 108, 127, 1) 100%);
+  height: 14px;
+  left: 0px;
+  top: 18px;
+  width: 14px;
+}
+
+.vendor-gamma .rectangle-604-wpJidn {
+  background: linear-gradient(134deg, rgba(50, 151, 231, 1) 0%, rgba(0, 108, 127, 1) 100%);
+  background-color: transparent;
+  height: 14px;
+  left: 19px;
+  position: absolute;
+  top: 18px;
+  width: 14px;
+}
+
+.vendor-gamma .rectangle-603-wpJidn {
+  background: linear-gradient(134deg, rgba(50, 151, 231, 1) 0%, rgba(0, 108, 127, 1) 100%);
+  height: 14px;
+  left: 0px;
+  top: 0px;
+  width: 14px;
+}
+
+.vendor-gamma .rectangle-604-OyttpT {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 661px;
+  left: 44px;
+  position: absolute;
+  top: 315px;
+  width: 951px;
+}
+
+.vendor-gamma .rectangle-606-OyttpT {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 177px;
+  left: 1014px;
+  position: absolute;
+  top: 315px;
+  width: 383px;
+}
+
+.vendor-gamma .rectangle-610-OyttpT {
+  background-color: #d2f1f7;
+  border-radius: 10px;
+  height: 153px;
+  left: 1014px;
+  position: absolute;
+  top: 513px;
+  width: 383px;
+}
+
+.vendor-gamma .rectangle-605-OyttpT {
+  background: linear-gradient(118deg, rgba(2, 40, 48, 1) 0%, rgba(48, 147, 224, 1) 100%);
+  background-color: transparent;
+  border-radius: 8px;
+  height: 59px;
+  left: 63px;
+  position: absolute;
+  top: 333px;
+  width: 146px;
+}
+
+.vendor-gamma .rectangle-600-OyttpT {
+  background: linear-gradient(118deg, rgba(1, 39, 47, 1) 0%, rgba(47, 143, 218, 1) 100%);
+  border-radius: 10px;
+  height: 160px;
+  left: 44px;
+  top: 127px;
+  width: 324px;
+}
+
+.vendor-gamma .rectangle-601-OyttpT {
+  background: linear-gradient(118deg, rgba(3, 44, 55, 1) 0%, rgba(44, 137, 208, 1) 100%);
+  left: 387px;
+  top: 127px;
+  width: 324px;
+}
+
+.vendor-gamma .rectangle-602-OyttpT {
+  background: linear-gradient(118deg, rgba(3, 44, 55, 1) 0%, rgba(46, 140, 212, 1) 100%);
+  border-radius: 10px;
+  height: 160px;
+  left: 730px;
+  top: 127px;
+  width: 324px;
+}
+
+.vendor-gamma .rectangle-603-OyttpT {
+  background: linear-gradient(118deg, rgba(0, 36, 42, 1) 0%, rgba(50, 151, 231, 1) 100%);
+  border-radius: 10px;
+  height: 160px;
+  left: 1073px;
+  top: 127px;
+  width: 324px;
+}
+
+.vendor-gamma .vibration-level-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 66px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 145px;
+  width: 208px;
+}
+
+.vendor-gamma .mms-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 281px;
+  letter-spacing: -0.72px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 238px;
+  width: auto;
+}
+
+.vendor-gamma .x5-OyttpT {
+  left: 63px;
+  top: 189px;
+}
+
+.vendor-gamma .group-288980-OyttpT {
+  background-color: transparent;
+  height: 123px;
+  left: 414px;
+  position: absolute;
+  top: 145px;
+  width: 269px;
+}
+
+.vendor-gamma .motor-voltage-mGWBFe {
+  background-color: transparent;
+  height: auto;
+  left: 3px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 208px;
+}
+
+.vendor-gamma .volt-mGWBFe {
+  background-color: transparent;
+  height: auto;
+  left: 218px;
+  letter-spacing: -0.72px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 93px;
+  width: auto;
+}
+
+.vendor-gamma .x5-mGWBFe {
+  left: 0px;
+  top: 44px;
+}
+
+.vendor-gamma .group-288981-OyttpT {
+  background-color: transparent;
+  height: 127px;
+  left: 760px;
+  position: absolute;
+  top: 142px;
+  width: 285px;
+}
+
+.vendor-gamma .motor-current-knd8tK {
+  background-color: transparent;
+  height: auto;
+  left: 3px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 208px;
+}
+
+.vendor-gamma .ampere-knd8tK {
+  background-color: transparent;
+  height: auto;
+  left: 190px;
+  letter-spacing: -0.72px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 97px;
+  width: auto;
+}
+
+.vendor-gamma .x8-knd8tK {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .group-288982-OyttpT {
+  height: 127px;
+  left: 1102px;
+  top: 142px;
+  width: 278px;
+}
+
+.vendor-gamma .power-consumption-qQXGxo {
+  background-color: transparent;
+  height: auto;
+  left: 3px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 238px;
+}
+
+.vendor-gamma .k-w-qQXGxo {
+  background-color: transparent;
+  height: auto;
+  left: 230px;
+  letter-spacing: -0.72px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 97px;
+  width: auto;
+}
+
+.vendor-gamma .x42-qQXGxo {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 44px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .running-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 92px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 347px;
+  width: auto;
+}
+
+.vendor-gamma .image-122-OyttpT {
+  background-color: transparent;
+  height: 458px;
+  left: 136px;
+  object-fit: cover;
+  position: absolute;
+  top: 447px;
+  width: 744px;
+}
+
+.vendor-gamma .belt-type-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 266px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 337px;
+  width: 128px;
+}
+
+.vendor-gamma .motor-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 443px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 337px;
+  width: 128px;
+}
+
+.vendor-gamma .section-length-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 598px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 336px;
+  width: 162px;
+}
+
+.vendor-gamma .belt-material-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 805px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 337px;
+  width: 162px;
+}
+
+.vendor-gamma .single-belt-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 266px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 366px;
+  width: 128px;
+}
+
+.vendor-gamma .good-products-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 1035px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 538px;
+  width: 149px;
+}
+
+.vendor-gamma .bad-products-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 1224px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 538px;
+  width: 149px;
+}
+
+.vendor-gamma .control-system-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 1112px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 339px;
+  width: 187px;
+}
+
+.vendor-gamma .power-system-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 1035px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 386px;
+  width: 149px;
+}
+
+.vendor-gamma .reset-count-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 1035px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 433px;
+  width: 149px;
+}
+
+.vendor-gamma .stepper-OyttpT {
+  background-color: transparent;
+  height: auto;
+  left: 443px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 366px;
+  width: 128px;
+}
+
+.vendor-gamma .x50-cm-OyttpT {
+  background-color: transparent;
+  color: var(--tiber);
+  font-family: var(--font-family-rubik);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 598px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 365px;
+  width: 128px;
+}
+
+.vendor-gamma .plastic-OyttpT {
+  background-color: transparent;
+  color: var(--tiber);
+  font-family: var(--font-family-rubik);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 805px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 367px;
+  width: 128px;
+}
+
+
+
+/*.vendor-gamma .rectangle-608-OyttpT::before {
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  background: linear-gradient(98deg, rgba(255, 189, 150, 1) 0%, rgba(254, 150, 150, 1) 100%);
+  background-color: transparent;
+  border-radius: 18px;
+  content: "";
+  inset: 0;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+
+}
+*/
+.vendor-gamma .rectangle-609-OyttpT {
+  background: linear-gradient(135deg, rgba(218, 155, 255, 1) 0%, rgba(160, 91, 255, 1) 100%);
+  background-color: transparent;
+  border-radius: 18px;
+  height: 31px;
+  left: 1197px;
+  position: absolute;
+  top: 433px;
+  width: 175px;
+  cursor: pointer;
+}
+
+.vendor-gamma .rectangle-607-OyttpT {
+  background: transparent/*linear-gradient(97deg, rgba(127, 216, 208, 1) 0%, rgba(31, 207, 181, 1) 100%);*/
+  background-color: transparent;
+  border-radius: 18px;
+  height: 31px;
+  left: 1197px;
+  position: absolute;
+  cursor: pointer;
+  top: 386px;
+  width: 79px;
+}
+.vendor-gamma .rectangle-608-OyttpT {
+  background:transparent /*linear-gradient(98deg, rgba(255, 189, 150, 1) 0%, rgba(254, 150, 150, 1) 100%);*/
+  background-color: transparent;
+  border: none;
+  padding: 1px 1px; 
+  border-radius: 18px;
+  height: 31px;
+  left: 1291px;
+  position: absolute;
+  top: 386px;
+  width: 79px;
+  cursor: pointer;
+}
+
+/* Tombol Gaya */
+.toggle-btn {
+  display: inline-block;
+  padding: 5px 10px; 
+  border-radius: 18px;
+  font-family: var(--font-family-roboto);
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+/* Tombol On aktif */
+.toggle-btn.on-btn.active {
+  background: linear-gradient(97deg, rgba(127, 216, 208, 1) 0%, rgba(31, 207, 181, 1) 100%);
+  border: none;
+  color: white;
+}
+
+/* Tombol On non-aktif */
+.toggle-btn.on-btn.inactive {
+  background-color: transparent;
+  border: 2px solid #7fd8d0;
+  color: #7fd8d0;
+}
+
+/* Tombol Off aktif */
+.toggle-btn.off-btn.active {
+  background: linear-gradient(98deg, rgba(255, 189, 150, 1) 0%, rgba(254, 150, 150, 1) 100%);
+  border: none;
+  color: white;
+}
+
+/* Tombol Off non-aktif */
+.toggle-btn.off-btn.inactive {
+  background-color: transparent;
+  border: 2px solid #fe9496;
+  color: #fe9496;
+}
+
+/* Reset Button */
+.reset-btn {
+  background: linear-gradient(135deg, rgba(218, 155, 255, 1) 0%, rgba(160, 91, 255, 1) 100%);
+  display: inline-block;
+  padding: 6px 67px; 
+  border-radius: 18px;
+  color: white;
+  font-family: var(--font-family-roboto);
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover,
+.reset-btn:hover {
+  opacity: 0.8;
+}
+
+.vendor-gamma .on-OyttpT {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1224px;
+  letter-spacing: -0.60px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 389px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .reset-OyttpT {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1259px;
+  letter-spacing: -0.60px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 436px;
+  width: 52px;
+}
+
+.vendor-gamma .off-OyttpT {
+  background-color: transparent;
+  color: #fe9496;
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  height: 23px;
+  left: 1317px;
+  letter-spacing: -0.60px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 387px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .line-144-OyttpT {
+  background-color: transparent;
+  height: 114px;
+  left: 1206px;
+  object-fit: cover;
+  position: absolute;
+  top: 533px;
+  width: 1px;
+}
+
+.vendor-gamma .title-OyttpT {
+  background-color: transparent;
+  color: var(--river-bed);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1035px;
+  letter-spacing: -1.83px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 573px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .x9-OyttpT {
+  background-color: transparent;
+  color: var(--river-bed);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 1224px;
+  letter-spacing: -1.83px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 573px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .rectangle-601-zbwjnV {
+  background: linear-gradient(118deg, rgba(3, 42, 52, 1) 0%, rgba(46, 140, 212, 1) 100%);
+  left: 664px;
+  top: 782px;
+  width: 145px;
+}
+
+.vendor-gamma .rectangle-611-OyttpT {
+  background: linear-gradient(118deg, rgba(4, 46, 59, 1) 0%, rgba(45, 138, 210, 1) 100%);
+  background-color: transparent;
+  border-radius: 10px;
+  height: 160px;
+  left: 824px;
+  position: absolute;
+  top: 782px;
+  width: 143px;
+}
+
+.vendor-gamma .group-288977-OyttpT {
+  background-color: transparent;
+  height: 116px;
+  left: 703px;
+  position: absolute;
+  top: 804px;
+  width: 73px;
+}
+
+.vendor-gamma .mass-1TEXvq {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 6px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .gram-1TEXvq {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 16px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 97px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .x40-1TEXvq {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.83px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.vendor-gamma .group-288982-zbwjnV {
+  height: 116px;
+  left: 831px;
+  top: 801px;
+  width: 135px;
+}
+
+.vendor-gamma .brightness-OQNeXZ {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 12px;
+  letter-spacing: -0.69px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 105px;
+}
+
+.vendor-gamma .lux-OQNeXZ {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 39px;
+  letter-spacing: -0.48px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 97px;
+  width: 51px;
+}
+
+.vendor-gamma .x200-OQNeXZ {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-roboto);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 0px;
+  letter-spacing: -1.83px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 29px;
+  width: 129px;
+}
+
+.vendor-gamma .group-288982 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.vendor-gamma .rectangle-600 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.vendor-gamma .rectangle-601 {
+  background-color: transparent;
+  border-radius: 10px;
+  height: 160px;
+  position: absolute;
+}
+
+.vendor-gamma .rectangle-602 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.vendor-gamma .rectangle-603 {
+  background-color: transparent;
+  position: absolute;
+}
+
+.vendor-gamma .x5 {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: -1.92px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+</style>
+</head>
+<body style="margin: 0; background: #f2edf3;">
+  <input type="hidden" id="anPageName" name="page" value="vendor-gamma">
+  <div class="container-center-horizontal">
+    <div class="vendor-gamma screen" data-id="2001:746">
+      <div class="rectangle-595-OyttpT" data-id="2001:747"></div>
+      <div class="vendor-betta-OyttpT" data-id="2001:748">Vendor Betta</div>
+      <div class="conveyor-monitoring-system-OyttpT" data-id="2001:749">Conveyor Monitoring System</div>
+      <div class="group-288975-OyttpT" data-id="2001:750">
+        <div class="rectangle-600-wpJidn rectangle-600" data-id="2001:1050"></div>
+        <div class="rectangle-602-wpJidn rectangle-602" data-id="2001:1054"></div>
+        <div class="rectangle-604-wpJidn" data-id="2001:1058"></div>
+        <div class="rectangle-603-wpJidn rectangle-603" data-id="2001:1056"></div>
+      </div>
+      <div class="rectangle-604-OyttpT" data-id="2001:755"></div>
+      <div class="rectangle-606-OyttpT" data-id="2001:756"></div>
+      <div class="rectangle-610-OyttpT" data-id="2001:757"></div>
+      <div class="rectangle-605-OyttpT" data-id="2001:758"></div>
+      <div class="rectangle-600-OyttpT rectangle-600" data-id="2001:760"></div>
+      <div class="rectangle-601-OyttpT rectangle-601" data-id="2001:761"></div>
+      <div class="rectangle-602-OyttpT rectangle-602" data-id="2001:762"></div>
+      <div class="rectangle-603-OyttpT rectangle-603" data-id="2001:763"></div>
+      <div class="vibration-level-OyttpT rowdies-normal-white-23px" data-id="2001:765">Vibration Level</div>
+      <div class="mms-OyttpT rowdies-normal-white-24px" data-id="2001:766">mm/s</div>
+      <div class="x5-OyttpT x5 roboto-normal-white-64px" data-id="2001:767">
+        <p id="vibration">-</p>
+      </div>
+      <div class="group-288980-OyttpT" data-id="2001:1064">
+        <div class="motor-voltage-mGWBFe rowdies-normal-white-23px" data-id="2001:1065">Motor Voltage</div>
+        <div class="volt-mGWBFe rowdies-normal-white-24px" data-id="2001:1066">Volt</div>
+        <div class="x5-mGWBFe x5 roboto-normal-white-64px" data-id="2001:1067">
+          <p id="voltage">-</p>
+        </div>
+      </div>
+      <div class="group-288981-OyttpT" data-id="2002:569">
+        <div class="motor-current-knd8tK rowdies-normal-white-23px" data-id="2002:570">Motor Current</div>
+        <div class="ampere-knd8tK rowdies-normal-white-24px" data-id="2002:571">Ampere</div>
+        <div class="x8-knd8tK roboto-normal-white-64px" data-id="2002:572">
+          <p id="current">-</p>
+        </div>
+      </div>
+      <div class="group-288982-OyttpT group-288982" data-id="2002:574">
+        <div class="power-consumption-qQXGxo rowdies-normal-white-23px" data-id="2002:575">Power Consumption</div>
+        <div class="k-w-qQXGxo rowdies-normal-white-24px" data-id="2002:576">kW</div>
+        <div class="x42-qQXGxo roboto-normal-white-64px" data-id="2002:577">
+          <p id="power">-</p>
+        </div>
+      </div>
+      <div class="running-OyttpT rowdies-normal-white-23px" data-id="2001:781"></div>
+      <img class="image-122-OyttpT" data-id="2001:782" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6805a2b17897c84a049b65e9/releases/6805a47bed67763a09a17aa0/img/image-122.png" alt="image 122">
+      <div class="belt-type-OyttpT rubik-light-tiber-23px" data-id="2001:783">Belt Type</div>
+      <div class="motor-OyttpT rubik-light-tiber-23px" data-id="2001:784">Motor</div>
+      <div class="section-length-OyttpT rubik-light-tiber-23px" data-id="2001:785">Section Length</div>
+      <div class="belt-material-OyttpT rubik-light-tiber-23px" data-id="2001:786">Belt Material</div>
+      <div class="single-belt-OyttpT roboto-medium-river-bed-23px" data-id="2001:787">Single Belt</div>
+      <div class="good-products-OyttpT roboto-light-river-bed-23px" data-id="2001:788">Good Products</div>
+      <div class="bad-products-OyttpT roboto-light-river-bed-23px" data-id="2001:789">Bad Products</div>
+      <div class="control-system-OyttpT roboto-medium-river-bed-23px" data-id="2001:790">Control System</div>
+      <div class="power-system-OyttpT roboto-light-river-bed-23px" data-id="2001:791">Power System</div>
+      <div class="reset-count-OyttpT roboto-light-river-bed-23px" data-id="2001:792">Reset Count</div>
+      <div class="stepper-OyttpT roboto-medium-river-bed-23px" data-id="2001:793">Stepper</div>
+      <div class="x50-cm-OyttpT" data-id="2001:794">50 cm</div>
+      <div class="plastic-OyttpT" data-id="2001:795">Plastic</div>
+      <div class="rectangle-609-OyttpT" data-id="2001:797" onclick="resetCount()">
+        <!-- Tombol Reset -->
+        <button class="reset-btn">Reset</button>
+      </div>
+    
+      <div class="rectangle-607-OyttpT" data-id="2001:796" onclick="togglePower(true)">
+        <!-- Tombol On -->
+        <button id="on-button" class="toggle-btn on-btn inactive">On</button>
+      </div>
+    
+      <div class="rectangle-608-OyttpT" data-id="2001:798" onclick="togglePower(false)">
+        <!-- Tombol Off -->
+        <button id="off-button" class="toggle-btn off-btn inactive">Off</button>
+      </div>
+    
+      <img class="line-144-OyttpT" data-id="2001:802" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6805a2b17897c84a049b65e9/releases/6805a47bed67763a09a17aa0/img/line-144.svg" alt="Line 144">
+      <h1 class="title-OyttpT" data-id="2001:803">
+        <p id="good-product">-</p>
+      </h1>
+      <div class="x9-OyttpT" data-id="2001:804">
+        <p id="bad-product">-</p>
+      </div>
+      <div class="rectangle-601-zbwjnV rectangle-601" data-id="2001:805"></div>
+      <div class="rectangle-611-OyttpT" data-id="2001:806"></div>
+      <div class="group-288977-OyttpT" data-id="2001:807">
+        <div class="mass-1TEXvq" data-id="2001:808">Mass</div>
+        <div class="gram-1TEXvq" data-id="2001:809">gram</div>
+        <div class="x40-1TEXvq" data-id="2001:810">
+          <p id="mass">-</p>
+        </div>
+      </div>
+      <div class="group-288982-zbwjnV group-288982" data-id="2001:811">
+        <div class="brightness-OQNeXZ" data-id="2001:812">Brightness</div>
+        <div class="lux-OQNeXZ" data-id="2001:813">Lux</div>
+        <div class="x200-OQNeXZ" data-id="2001:814">
+          <p id="brightness">-</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+  <script>
+    // Fungsi untuk mengatur tampilan tombol berdasarkan status
+    function updatePowerButtonsUI(status) {
+      const onButton = document.getElementById('on-button');
+      const offButton = document.getElementById('off-button');
+      const runningIndicator = document.querySelector('.image-122-OyttpT'); // Pilih gambar indikator
+      
+      if (status) {
+        // Sistem ON
+        onButton.className = 'toggle-btn on-btn active';
+        offButton.className = 'toggle-btn off-btn inactive';
+        document.querySelector('.running-OyttpT').textContent = "Running"; // Ubah teks
+        runningIndicator.style.opacity = "1"; // Tampilkan indikator saat running
+      } else {
+        // Sistem OFF
+        onButton.className = 'toggle-btn on-btn inactive';
+        offButton.className = 'toggle-btn off-btn active';
+        document.querySelector('.running-OyttpT').textContent = "Stopped"; // Ubah teks
+        runningIndicator.style.opacity = "0.3"; // Redupkan indikator saat berhenti
+      }
+    }  
+
+    // Fungsi untuk mendapatkan CSRF token dari cookie
+    function getCsrfToken() {
+      const name = 'csrftoken';
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          if (cookie.substring(0, name.length + 1) === (name + '=')) {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+
+    async function fetchData() {
+      try {
+        const sensorRes = await fetch('/api/sensordata/');
+        const powerRes = await fetch('/api/powersystem/');
+
+        if (!sensorRes.ok || !powerRes.ok) {
+          throw new Error("Failed to fetch data");
+        }
+
+        const sensorData = await sensorRes.json();
+        const powerData = await powerRes.json();
+
+        if (sensorData.length === 0 || powerData.length === 0) {
+          console.warn("No data available");
+          return;
+        }
+
+        const sensor = sensorData[sensorData.length - 1];
+        const power = powerData[powerData.length - 1];
+
+        document.getElementById("vibration").textContent = sensor.vibration_level;
+        document.getElementById("voltage").textContent = sensor.motor_voltage;
+        document.getElementById("current").textContent = sensor.motor_current;
+        document.getElementById("power").textContent = sensor.power_consumption;
+        document.getElementById("mass").textContent = sensor.bottle_mass;
+        document.getElementById("brightness").textContent = sensor.bottle_brightness;
+        document.getElementById("good-product").textContent = sensor.good_product;
+        document.getElementById("bad-product").textContent = sensor.bad_product;
+        
+        // Update tampilan tombol berdasarkan status power
+        updatePowerButtonsUI(power.status);
+        
+        // Jika ada elemen status di UI, update juga
+        const statusEl = document.getElementById("power-status");
+        if (statusEl) {
+          statusEl.textContent = power.status ? "On" : "Off";
+          statusEl.className = power.status ? "status-on" : "status-off";
+        }
+        
+        const reasonEl = document.getElementById("power-reason");
+        if (reasonEl) {
+          reasonEl.textContent = power.reason;
+        }
+        
+      } catch (err) {
+        console.error("Polling error:", err);
+      }
+    }
+
+    // Fungsi untuk mengubah status daya
+    function togglePower(status) {
+      console.log(status ? "Sistem ON" : "Sistem OFF");
+      
+      // Perbarui UI sebelum request (untuk responsivitas lebih baik)
+      updatePowerButtonsUI(status);
+      
+      fetch('/api/powersystem/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCsrfToken() // Tambahkan token CSRF
+        },
+        body: JSON.stringify({
+          status: status,
+          timestamp: new Date().toISOString(),
+          reason: status ? "Manual activation" : "Manual deactivation"
+        })
+      })
+      .then(response => {
+        if (!response.ok) {
+          // Jika gagal, kembalikan UI ke status sebelumnya
+          updatePowerButtonsUI(!status); 
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Power status changed:", data);
+        fetchData(); // Refresh data setelah perubahan berhasil
+      })
+      .catch(err => {
+        console.error("Error saat mengubah status daya:", err);
+        alert("Gagal mengubah status daya. Silakan coba lagi.");
+      });
+    }
+
+    // Fungsi untuk mereset penghitung
+    function resetCount() {
+      console.log("Reset Count");
+      fetch('/api/resetcount/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': getCsrfToken() // Tambahkan token CSRF
+        },
+        body: JSON.stringify({ reset: true })
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log("Counters reset:", data);
+        // Perbarui UI langsung
+        document.getElementById("good-product").textContent = "0";
+        document.getElementById("bad-product").textContent = "0";
+        fetchData(); // Refresh data setelah perubahan berhasil
+      })
+      .catch(err => {
+        console.error("Error saat mereset penghitung:", err);
+        alert("Gagal mereset penghitung. Silakan coba lagi.");
+      });
+    }
+
+    // Panggil fetchData() saat halaman dimuat
+    fetchData();
+    
+    // Set interval untuk polling
+    setInterval(fetchData, 1000); // every 1s
+  </script>
+
+  <script src="launchpad-js/launchpad-banner.js" async></script>
+  <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+</body>
+</html>
